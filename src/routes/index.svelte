@@ -1,2 +1,24 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script context="module">
+	export async function load({ fetch }) {
+		const res = await fetch('/all.json');
+		const { Products } = await res.json();
+
+		if (res.ok) {
+			return {
+				props: { Products }
+			};
+		}
+
+		return {
+			status: res.status,
+			error: new Error('could not fetch')
+		};
+	}
+</script>
+
+<script>
+	export let Products;
+	import ProductList from '../components/ProductList.svelte';
+</script>
+
+<ProductList {Products} />
