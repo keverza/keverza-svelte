@@ -17,8 +17,17 @@
 </script>
 
 <script>
+	import { productStore } from '../stores/productStore';
+
 	export let Products;
+
+	import Logo from '../components/Logo.svelte';
 	import ProductList from '../components/ProductList.svelte';
+	import { fade } from 'svelte/transition';
 </script>
+
+<a in:fade class="flex min-h-screen min-w-full items-center justify-center bg-gray-100" href="/">
+	<Logo className="sticky top-1/3 mb-0 max-w-sm pb-0 md:max-w-md lg:max-w-xl" />
+</a>
 
 <ProductList {Products} />

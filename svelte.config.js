@@ -7,6 +7,9 @@ const config = {
 		adapter: adapter()
 	},
 	preprocess: preprocess(),
+	experimental:{
+		useVitePreprocess: true
+	}
 };
 
 export default config;

@@ -1,5 +1,6 @@
 <script context="module">
 	export async function load({ fetch, params, url }) {
+		//Query single product
 		const slug = params.product;
 		const res = await fetch(`/products/${slug}.json`);
 		const data = await res.json();
@@ -7,7 +8,7 @@
 
 		if (res.ok) {
 			return {
-				props: { product }
+				props: { product, url }
 			};
 		}
 		// redirect back if product not found
@@ -19,9 +20,20 @@
 </script>
 
 <script>
-	export let product;
+	import RecommendedList from '../../components/RecommendedList.svelte';
+	export let url;
+
 	//destructure product data
+	export let product;
 	export let { name, story, features, imageSrc, imageAlt } = product;
+
+	// import { productStore, currentProduct } from '../../stores/productStore';
+	// let current = url.pathname;
+	// $: {
+	// 	$currentProduct = $productStore.filter((product) => `/products/${product.href}` === current);
+	// 	console.log($currentProduct[0]);
+	// }
+	// export let { name, story, features, imageSrc, imageAlt } = $currentProduct[0];
 </script>
 
 <div class="bg-white">
@@ -53,3 +65,5 @@
 		</div>
 	</div>
 </div>
+
+<RecommendedList {url} />

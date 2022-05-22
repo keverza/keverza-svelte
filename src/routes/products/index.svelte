@@ -23,6 +23,7 @@
 	 * @type {any}
 	 */
 	let Products;
+
 	import ProductList from '../../components/ProductList.svelte';
 	// //search bar
 	// import { products } from '../../stores/productStore';
@@ -47,4 +48,5 @@
 	placeholder="Search"
 	bind:value={searchTerm}
 /> -->
+
 <ProductList {Products} />

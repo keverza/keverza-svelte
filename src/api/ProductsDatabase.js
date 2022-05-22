@@ -4,7 +4,7 @@ const Products = [
     name: 'Madagascar Sambirano',
     href: 'madagascar-sambirano',
     price: '2.2 eur',
-    imageSrc: '../lib/img/amirali-mirhashemian-RCVIlSXhYI0-unsplash.jpg',
+    imageSrc: '/img/amirali-mirhashemian-RCVIlSXhYI0-unsplash.jpg',
     imageAlt: 'Ripe bunches of cocoa',
     story:
       'Giliai Madagascaro džiunglėse, ūkininkų kooperatyvuose auginamos ne tik kakavos pupelės, bet ir mangai, bananai, vanilė, kava. Dėl to kakava įgauna ypatingai vaisinį skonio profilį su subtiliais jazminų bei vanilės, citrinų aromato užuominom. ',
@@ -37,7 +37,7 @@ const Products = [
     name: 'Tanzania Kokoa Kamily',
     href: 'tanzania-kokoa-kamily',
     price: '2.2 eur',
-    imageSrc: '../lib/img/kyle-hinkson-fuuhb86A-tE-unsplash.jpg',
+    imageSrc: '/img/kyle-hinkson-fuuhb86A-tE-unsplash.jpg',
     imageAlt:
       'Olive drab green insulated bottle with flared screw lid and flat top.',
     story:
@@ -71,7 +71,7 @@ const Products = [
     name: 'India Idukki',
     href: 'india-idukki',
     price: '2.2 eur',
-    imageSrc: '../lib/img/tetiana-bykovets-wcH1vEjwmL8-unsplash.jpg',
+    imageSrc: '/img/tetiana-bykovets-wcH1vEjwmL8-unsplash.jpg',
     imageAlt:
       'Person using a pen to cross a task off a productivity paper card.',
     story:
@@ -105,7 +105,7 @@ const Products = [
     name: 'Guatemala Cahabón',
     href: 'guatemala-cahabon',
     price: '2.2 eur',
-    imageSrc: '../lib/img/tetiana-bykovets-7LKpstdOad0-unsplash.jpg',
+    imageSrc: '/img/tetiana-bykovets-7LKpstdOad0-unsplash.jpg',
     imageAlt:
       'Hand holding black machined steel mechanical pencil with brass tip and top.',
     story:
@@ -139,7 +139,7 @@ const Products = [
     name: 'São tome Felis Cacao',
     href: 'sao-tome-felis-cacao',
     price: '2.2 eur',
-    imageSrc: '../lib/img/michele-blackwell-evRB-x0TJkM-unsplash.jpg',
+    imageSrc: '/img/michele-blackwell-evRB-x0TJkM-unsplash.jpg',
     imageAlt:
       'Hand holding black machined steel mechanical pencil with brass tip and top.',
     story:
@@ -174,7 +174,7 @@ const Products = [
     name: 'Baltasis Aviečių Šokoladas',
     href: 'white-raspberry',
     price: '2.2 eur',
-    imageSrc: '../lib/img/emy-Rx3QSrG1coc-unsplash.jpg',
+    imageSrc: '/img/emy-Rx3QSrG1coc-unsplash.jpg',
     imageAlt:
       'Hand holding black machined steel mechanical pencil with brass tip and top.',
     story: 'Baltasis šokoladas su vaisiais.',

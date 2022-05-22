@@ -1,17 +1,15 @@
-import {writable} from "svelte/store"
+import {readable, writable} from "svelte/store"
+import ProductDatabase from '../api/ProductsDatabase'
 
-export const products = writable([])
+export const productStore = readable(ProductDatabase)
+export const currentProduct = writable([])
+export const filteredProduct = writable([])
 
-const fetchProduct = async ({fetch}) => {    
-    const res = await fetch('/all.json')
-    const {data} = await res.json()
-    const loadedProduct = data.results.map((data, index)=> {
-        return {
-            name: data.name,
-            id: index +1,            
-        }
-    })
-    products.set(loadedProduct)
-}
+// const fetchProduct = async ({fetch}) => {    
+//     const res = await fetch('/all.json')
+//     const {data} = await res.json()    
+//     products.set(data)
+// }
 
-fetchProduct()
+// fetchProduct()
+
