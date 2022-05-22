@@ -21,49 +21,90 @@
 
 <script>
 	import RecommendedList from '../../components/RecommendedList.svelte';
+	import ProductStory from '../../components/ProductStory.svelte';
+	import ProductStoryPlaceholder from '../../components/ProductStoryPlaceholder.svelte';
 	export let url;
 
-	//destructure product data
 	export let product;
-	export let { name, story, features, imageSrc, imageAlt } = product;
 
-	// import { productStore, currentProduct } from '../../stores/productStore';
-	// let current = url.pathname;
+	import { productStore, currentProduct } from '../../stores/productStore';
+	import { goto } from '$app/navigation';
+	let current = url.pathname;
 	// $: {
 	// 	$currentProduct = $productStore.filter((product) => `/products/${product.href}` === current);
-	// 	console.log($currentProduct[0]);
 	// }
-	// export let { name, story, features, imageSrc, imageAlt } = $currentProduct[0];
+	// export let product = $currentProduct[0];
+
+	const options = $productStore;
+	let selected = options[0];
+
+	let component;
+	let props;
+	$: props = options[selected.id - 1];
+	const route = () => {
+		component = ProductStory;
+		props = options[selected.id - 1];
+		console.log('should not');
+	};
+	const clear = () => {
+		component = ProductStoryPlaceholder;
+		props = 'loading';
+	};
+	const route3 = (opt) => {
+		clear();
+		setTimeout(() => {
+			component = ProductStory;
+			props = opt;
+			goto(`/products/${props.href}`);
+			console.log(props.name);
+		}, 1);
+	};
+
+	// export let prod;
+	// $: {
+	// 	prod = $productStore.filter((product) => product.id === selected.id - 1);
+	// }
+
+	// const list = $productStore.map((product)=><ProductStory {product} />)
 </script>
 
-<div class="bg-white">
-	<div
-		class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8"
-	>
-		<div>
-			<h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-				{name}
-			</h2>
-			<p class="mt-4 text-gray-500">{story}</p>
+<!-- <select bind:value={selected}>
+	{#each options as option}
+		<option value={option}>{option.name}</option>
+	{/each}
+</select>
 
-			<dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-				{#each features as feature (feature.name)}
-					<div class="border-t border-gray-200 pt-4">
-						<dt class="font-medium text-gray-900">{feature.name}</dt>
-						<dd class="mt-2 text-sm text-gray-500">
-							{feature.description}
-						</dd>
-					</div>
-				{/each}
-			</dl>
-		</div>
-		<div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-			<img src={imageSrc} alt={imageAlt} class="rounded-lg bg-gray-100" />
-			<img src={imageSrc} alt={imageAlt} class="rounded-lg bg-gray-100" />
-			<img src={imageSrc} alt={imageAlt} class="rounded-lg bg-gray-100" />
-			<img src={imageSrc} alt={imageAlt} class="rounded-lg bg-gray-100" />
-		</div>
-	</div>
+<p>option: {options[selected.id - 1].name}</p>
+<p>selected id: {selected.id - 1} {selected.name}</p>
+
+<button class="rounded-lg p-2 bg-gray-300" on:click={route}>route</button>
+<button class="rounded-lg p-2 bg-gray-300" on:click={clear}>clear</button> -->
+
+<div class="flex flex-col">
+	{#each options as option}
+		<button class="hover:bg-gray-300" on:click={() => route3(option)} value={option}>
+			{option.name}
+		</button>
+	{/each}
 </div>
 
+<svelte:component this={component} product={props} />
+
+<!-- <p class="bg-gray-500 my-5">If statemaents below</p> -->
+
+<!-- {#if selected.id === 1}
+	<ProductStory product={options[selected.id - 1]} />
+{:else if selected.id === 2}
+	<ProductStory product={options[selected.id - 1]} />
+{:else if selected.id === 3}
+	<ProductStory product={options[selected.id - 1]} />
+{:else if selected.id === 4}
+	<ProductStory product={options[selected.id - 1]} />
+{:else if selected.id === 5}
+	<ProductStory product={options[selected.id - 1]} />
+{:else if selected.id === 6}
+	<ProductStory product={options[selected.id - 1]} />
+{/if}
+
+<ProductStory {product} /> -->
 <RecommendedList {url} />

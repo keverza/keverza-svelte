@@ -31,3 +31,6 @@
 </a>
 
 <ProductList {Products} />
+<a href="/products/guatemala-cahabon">guatemala-cahabon</a>
+<br />
+<a href="/products/tanzania-kokoa-kamily">tanzania-kokoa-kamily</a>

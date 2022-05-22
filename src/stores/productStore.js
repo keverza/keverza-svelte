@@ -4,6 +4,7 @@ import ProductDatabase from '../api/ProductsDatabase'
 export const productStore = readable(ProductDatabase)
 export const currentProduct = writable([])
 export const filteredProduct = writable([])
+export const props = writable([])
 
 // const fetchProduct = async ({fetch}) => {    
 //     const res = await fetch('/all.json')

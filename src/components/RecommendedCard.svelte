@@ -3,7 +3,7 @@
 	let { href, imageSrc, imageAlt, name, price } = product;
 </script>
 
-<a sveltekit:prefetch href={`/products/${href}`} class="group">
+<a target="_self" sveltekit:prefetch href={`/products/${href}`} class="group">
 	<div class="w-full overflow-hidden rounded-xl bg-gray-200">
 		<div class="relative h-40 group-hover:opacity-75">
 			<img src={imageSrc} alt={imageAlt} />
