@@ -16,7 +16,7 @@ import { onMount, tick } from 'svelte';
 <footer class="flex flex-col min-w-full justify-center p-5 text-gray-700 pt-10 ">
 	<hr>
 	<div class=" w-full max-w-2xl grid grid-cols-1 md:grid-cols-2 gap-4 pb-8 m-auto pt-10">
-		<ul class="flex flex-col gap-x-5 w-1/2 px-2 space-y-4 items-center md:items-start justify-self-center md:justify-self-start">
+		<ul class=" flex min-w-fit flex-col gap-x-5 w-1/2 px-2 space-y-4 items-center md:items-start justify-self-center md:justify-self-start">
 			<li>
 				<a sveltekit:prefetch href="/about" class="link" aria-label="{'Footer tags link'}">Apie</a>
 			</li>
@@ -27,10 +27,10 @@ import { onMount, tick } from 'svelte';
 				<a sveltekit:prefetch href="/payment" class="link" aria-label="{'Footer tags link'}">Apmokėjimas</a>
 			</li>
 			<li>
-				<a sveltekit:prefetch href="/info" class="link" aria-label="{'Footer tags link'}">Informacija</a>
+				<a sveltekit:prefetch href="/map" class="link" aria-label="{'Footer tags link'}">Žemėlapis</a>
 			</li>
 			</ul>
-			<ul class="flex flex-col w-1/2  gap-x-5  px-2 items-center md:items-end justify-self-center md:justify-self-end space-y-4">
+			<ul class="flex flex-col w-1/2 min-w-fit  gap-x-5  px-2 items-center md:items-end justify-self-center md:justify-self-end space-y-4">
 			<li>
 				<a sveltekit:prefetch href="/b2b" class="link" aria-label="{'Footer tags link'}">Verslui</a>
 			</li>
@@ -55,7 +55,7 @@ import { onMount, tick } from 'svelte';
 			aria-label="link to homepage">
 			<Logo showSubheading={false} fill={"rgb(82,82,82)"} className="justify-center h-20 m-auto  pb-0" />
 		</a>
-		<p class="text-sm pt-4">Lietuviškas nuo plytelės iki pupelės šokoladas</p>
+		<p class="text-sm pt-4 uppercase">Lietuviškas nuo plytelės iki pupelės šokoladas</p>
 	</div>
 	{/if}
 	<div class="flex flex-col pt-6">
@@ -76,6 +76,7 @@ import { onMount, tick } from 'svelte';
 		background-size: 2px;
 		background-size: auto 185%;
 		padding: 2px;
+		text-transform: uppercase;
 	}
 
 	.link:hover {

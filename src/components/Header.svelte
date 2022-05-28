@@ -2,6 +2,7 @@
 	import Icon from 'svelte-awesome';
 	import instagram from 'svelte-awesome/icons/instagram';
 	import envelope from 'svelte-awesome/icons/envelope';
+	import shoppingBag from 'svelte-awesome/icons/shoppingBag';
 
 	import Logo from './Logo.svelte';
 	import DarkModeToggle from './darkModeToggle.svelte';
@@ -26,16 +27,24 @@
 	</a>
 	<div class="absolute flex min-w-full flex-row-reverse h-20 a pr-4 pt-0 gap-x-2 items-center">
 		<a class="hover:text-zinc-800 text-zinc-400" 
+					href="/" 
+					aria-label="shopping cart">
+					<Icon data={shoppingBag} scale={1.5}/>
+				</a>
+
+		<a class="hover:text-zinc-800 text-zinc-400 " 
 			href="https://www.instagram.com/keverza" 
 			aria-label="Link to Keverza instagram">		
 			<Icon data={instagram} scale={1.5}/>
 		</a>
 
-		<a class="hover:text-zinc-800 text-zinc-400" 
+		<a class="hover:text-zinc-800 text-zinc-400" 	
 			href="mailto:keverza@keverza.com" 
 			aria-label="Mail to Keverza">
-			<Icon data={envelope} scale={1.5}/>
+			<Icon data={envelope} scale={1.5} class="stroke-green-700"/>
 		</a>
+		
+		
 	</div>
 
 </div>

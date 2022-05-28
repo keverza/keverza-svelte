@@ -5,7 +5,7 @@ const Products = [
     href: 'madagascar-sambirano',
     price: '2.2 eur',
     imageSrc: '/img/amirali-mirhashemian-RCVIlSXhYI0-unsplash.jpg',
-    imageAlt: 'Ripe bunches of cocoa',
+    imageAlt: 'Madagascar Sambirano',
     story:
       'Giliai Madagascaro džiunglėse, ūkininkų kooperatyvuose auginamos ne tik kakavos pupelės, bet ir mangai, bananai, vanilė, kava. Dėl to kakava įgauna ypatingai vaisinį skonio profilį su subtiliais jazminų bei vanilės, citrinų aromato užuominom. ',
     features: [
@@ -39,7 +39,7 @@ const Products = [
     price: '2.2 eur',
     imageSrc: '/img/kyle-hinkson-fuuhb86A-tE-unsplash.jpg',
     imageAlt:
-      'Olive drab green insulated bottle with flared screw lid and flat top.',
+      'Tanzania Kokoa Kamily',
     story:
       'Kilombero slėnyje, greta Udzungwa kalno nacionalinio parko smulkieji ūkininkai augina nuostabią pilnos skonių paletės kakavą. Saulėje džiovinta ir atidžiai stebima. Kakava Tanzanijoe turi ilgą istoriją ir didelią kakavos auginimo patirtį nuo pat 1880 kai buvo atplukdytos pirmosios pupelės.',
     features: [
@@ -73,7 +73,7 @@ const Products = [
     price: '2.2 eur',
     imageSrc: '/img/tetiana-bykovets-wcH1vEjwmL8-unsplash.jpg',
     imageAlt:
-      'Person using a pen to cross a task off a productivity paper card.',
+      'India Idukki',
     story:
       'Žaliasis Idukki slėnis garsus aromatingais prieskoniais ir idealiomis sąlygomis auginti kakavą. Pupelės pasižymi švelnia kremine tekstūra ir turtingais prieskonių ir vaisių aromatais.',
     features: [
@@ -107,7 +107,7 @@ const Products = [
     price: '2.2 eur',
     imageSrc: '/img/tetiana-bykovets-7LKpstdOad0-unsplash.jpg',
     imageAlt:
-      'Hand holding black machined steel mechanical pencil with brass tip and top.',
+      'Guatemala Cahabón',
     story:
       'Cahabón regiono kalvose auginamas kardamonas, cinamonas, čili pipirai ir kakava įgyjanti intensyvius prieskoninius aromatus. Cahabón kakavos pupelės yra intensyvios ir nors nėra labai kompleksiško skonio profilio jos maloniai nustebina vaisine rūgštele, riešutiniu kartumu ir viską užbaiginačiomis karamelės užuominomus.',
     features: [
@@ -136,12 +136,12 @@ const Products = [
   },
   {
     id: 5,
-    name: 'São tome Felis Cacao',
+    name: 'São Tome Felis Cacao',
     href: 'sao-tome-felis-cacao',
     price: '2.2 eur',
     imageSrc: '/img/michele-blackwell-evRB-x0TJkM-unsplash.jpg',
     imageAlt:
-      'Hand holding black machined steel mechanical pencil with brass tip and top.',
+      'São Tome Felis Cacao',
     story:
       'São Tomé dar vadinama šokolado sala Afrikoje, kurioje buvo pradėtata auginti ir iki šių dienų išsaugoti autentiški pupelių porūšiai. Šiame regione vyrauja amelonado, trinitario ir forastero pupelių porūšiai pupelėms. Jiems būdingas intensyvus kakavos skonis su vaisinėmis natomis pabaigoje.',
     features: [
@@ -176,7 +176,7 @@ const Products = [
     price: '2.2 eur',
     imageSrc: '/img/emy-Rx3QSrG1coc-unsplash.jpg',
     imageAlt:
-      'Hand holding black machined steel mechanical pencil with brass tip and top.',
+      'Baltasis Aviečių Šokoladas',
     story: 'Baltasis šokoladas su vaisiais.',
     features: [
       { name: 'Kilmės šalis', description: '???' },

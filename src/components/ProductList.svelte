@@ -1,5 +1,5 @@
-<script>
-	export let Products;
+<script lang="ts">
+	export let Products : Array<any>;
 </script>
 
 <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -21,8 +21,8 @@
 						class="h-full w-full object-cover object-center group-hover:opacity-75"
 					/> -->
 				</div>
-				<h3 class="mt-4 text-lg font-medium text-gray-900">{product.name}</h3>
-				<p class="mt-1 text-sm  text-gray-700">
+				<h3 class="mt-4 text-xl font-light text-gray-900 uppercase tracking-widest ">{product.name}</h3>
+				<p class="mt-1 text-md  text-gray-700 truncate">
 					{product.features[3].name}: {product.features[3].description}
 				</p>
 			</a>
