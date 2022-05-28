@@ -6,7 +6,7 @@
 
 <div transition:fade class="bg-white">
 	<div
-		class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8"
+		class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8 "
 	>
 		<div>
 			<h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -25,11 +25,16 @@
 				{/each}
 			</dl>
 		</div>
-		<div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
-			<img src={imageSrc} alt={imageAlt} class="rounded-lg bg-gray-100 " />
-			<img src={imageSrc} alt={imageAlt} class="rounded-lg bg-gray-100 " />
-			<img src={imageSrc} alt={imageAlt} class="rounded-lg bg-gray-100 " />
-			<img src={imageSrc} alt={imageAlt} class="rounded-lg bg-gray-100 " />
+
+		<div class="grid grid-cols-1 grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-4 sm:gap-6 lg:gap-8   ">
+			<div  alt={imageAlt} style="background-image: url('{imageSrc}')" class="rounded-lg bg-cover bg-center aspect-square" />
+			<div  alt={imageAlt} style="background-image: url('{imageSrc}')" class="rounded-lg bg-cover bg-center aspect-square" />
+			<div  alt={imageAlt} style="background-image: url('{imageSrc}')" class="rounded-lg bg-cover bg-center aspect-square" />
+			<div  alt={imageAlt} style="background-image: url('{imageSrc}')" class="rounded-lg bg-cover bg-center aspect-square" />
 		</div>
 	</div>
 </div>
+
+<style>
+
+</style>

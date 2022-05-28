@@ -1,4 +1,4 @@
-import Products from '../api/ProductsDatabase'
+import Products from '$lib/ProductsDatabase'
 
 export async function get() {
     //connect to db & get data

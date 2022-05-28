@@ -1,6 +1,6 @@
 <script context="module">
 	export async function load({ fetch }) {
-		const res = await fetch('/all.json');
+		const res = await fetch('api/all');
 		const { Products } = await res.json();
 
 		if (res.ok) {
@@ -24,29 +24,30 @@
 	 */
 	let Products;
 
-	import ProductList from '../../components/ProductList.svelte';
-	// //search bar
-	// import { products } from '../../stores/productStore';
+	import ProductList from '$components/ProductList.svelte';
 
-	// let searchTerm = '';
-	// let filteredProduct = [];
+	// //search bar
+	let searchTerm = '';
+	let filteredProduct = [];
 
 	// $: {
 	// 	if (searchTerm) {
-	// 		filteredProduct = $products.filter((product) =>
-	// 			product.name.toLowerCase().includes(searchTerm.toLowerCase())
-	// 		);
+	// 		filteredProduct = Products.filter((product) => {
+	// 			product.name.toLowerCase().includes(searchTerm.toLowerCase());
+	// 			console.log(filteredProduct);
+	// 		});
 	// 	} else {
-	// 		filteredProduct = [...$Products];
+	// 		filteredProduct = [...Products];
 	// 	}
 	// }
 </script>
 
-<!-- <input
-	class="w-full rounded-md text-lg border-2 border-gray-200"
+<input
+	class="w-full rounded-md text-lg border-2 border-gray-200 mx-10"
 	type="text"
-	placeholder="Search"
+	placeholder=" Search"
 	bind:value={searchTerm}
-/> -->
+/>
+<p>{searchTerm}</p>
 
 <ProductList {Products} />

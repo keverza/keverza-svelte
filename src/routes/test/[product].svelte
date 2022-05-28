@@ -1,11 +1,5 @@
 <script context="module">
 	export async function load({ fetch, params, url }) {
-		// try to reload page
-		// if(changed) {
-		// 	location.assign(url)
-		// 	return new Promise(()=> {})
-		// }
-
 		//Query single product
 		const slug = params.product;
 		const res = await fetch(`/api/${slug}.json`);
@@ -35,7 +29,27 @@
 	import { productStore, currentProduct } from '../../stores/productStore';
 	import { goto } from '$app/navigation';
 	let current = url.pathname;
+
+	const reload = () => {
+		console.log('reloaded');
+	};
+
+	async function fecthData() {
+		const response = await fetch('/api/');
+		const { Products } = await response.json();
+		console.log(Products);
+		return Products;
+	}
+	fecthData();
 </script>
+
+<div class="flex flex-col">
+	{#each Products as option}
+		<button class="hover:bg-gray-300" on:click={() => reload()} value={option}>
+			{option.name}
+		</button>
+	{/each}
+</div>
 
 <ProductStory {product} />
 <RecommendedList {url} />

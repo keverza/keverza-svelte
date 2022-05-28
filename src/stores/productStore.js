@@ -1,5 +1,5 @@
 import {readable, writable} from "svelte/store"
-import ProductDatabase from '../api/ProductsDatabase'
+import ProductDatabase from '$lib/ProductsDatabase'
 
 export const productStore = readable(ProductDatabase)
 export const currentProduct = writable([])
