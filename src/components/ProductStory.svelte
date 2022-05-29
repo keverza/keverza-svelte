@@ -1,8 +1,20 @@
-<script>
+<script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { blur } from 'svelte/transition';
+
+	import {isOverlayOpen, overlayData} from '../stores/overlayStore'
 	export let product;
 	export let { name, story, features, imageSrc, imageAlt } = product;
+
+	const setOverlayData = (title : string, info: string, imgSrc: string, imgAlt: string) => {
+		overlayData.set({
+					title,
+					info,
+					imgSrc,
+					imgAlt
+					})
+
+			}
 </script>
 
 <div in:blur class="bg-white">
@@ -28,19 +40,25 @@
 		</div>
 
 		<div class="grid grid-cols-2 grid-rows-2 lg:grid-cols-2 lg:grid-rows-2 gap-4 sm:gap-6 lg:gap-8   ">
-			<div  alt={imageAlt} 
-			style="background-image: url('{imageSrc}')" 
-			class="rounded-lg bg-cover bg-center aspect-square" />
-			<div  alt={imageAlt} 
-			style="background-image: url('{imageSrc}')" 
-			class="rounded-lg bg-cover bg-center aspect-square" />
-			<div  alt={imageAlt} 
-			style="background-image: url('{imageSrc}')" 
-			class="rounded-lg bg-cover bg-center aspect-square" />
-			<div  alt={imageAlt} 
-			style="background-image: url('{imageSrc}')" 
-			class="rounded-lg bg-cover bg-center aspect-square" />
+			<img  on:click={() => {isOverlayOpen.set(!$isOverlayOpen), setOverlayData(name, story, imageSrc, imageAlt)}} 
+			src={imageSrc} 
+			alt={imageAlt} 
+			class="h-full w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md"/> 
+			<img  on:click={() => {isOverlayOpen.set(!$isOverlayOpen), setOverlayData(name, story, imageSrc, imageAlt)}} 
+			src={imageSrc} 
+			alt={imageAlt} 
+			class="h-full w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md"/> 
+			<img  on:click={() => {isOverlayOpen.set(!$isOverlayOpen), setOverlayData(name="Koks nors kitas tekstas", story, imageSrc, imageAlt)}}
+			src={imageSrc} 
+			alt={imageAlt} 
+			class="h-full w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md"/> 
+			<img on:click={() => {isOverlayOpen.set(!$isOverlayOpen), setOverlayData(name="Info apie k1 nors", story, imageSrc, imageAlt)}} 
+			src={imageSrc} 
+			alt={imageAlt} 
+			class="h-full w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md"/> 
 		</div>
+
+		
 	</div>
 </div>
 

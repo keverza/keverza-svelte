@@ -29,13 +29,16 @@
 	import RecommendedList from '../../components/RecommendedList.svelte';
 	import ProductStory from '../../components/ProductStory.svelte';
 	import Loading from '../../components/Loading.svelte';
+	import AddToCart from '../../components/AddToCart.svelte'
 	export let url;
 	export let product;
 
 	import { productStore, currentProduct } from '../../stores/productStore';
 	import { goto } from '$app/navigation';
+	import About from '../about.svelte';
 	let current = url.pathname;
 </script>
 
 <ProductStory {product} />
+<AddToCart {product}/>
 <RecommendedList {url} />

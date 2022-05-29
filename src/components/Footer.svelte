@@ -55,11 +55,11 @@ import { onMount, tick } from 'svelte';
 			aria-label="link to homepage">
 			<Logo showSubheading={false} fill={"rgb(82,82,82)"} className="justify-center h-20 m-auto  pb-0" />
 		</a>
-		<p class="text-sm pt-4 uppercase">Lietuviškas nuo plytelės iki pupelės šokoladas</p>
+		<p class="text-sm pt-0 uppercase">Lietuviškas nuo plytelės iki pupelės šokoladas</p>
 	</div>
 	{/if}
 	<div class="flex flex-col pt-6">
-		<p class="flex justify-center px-2  text-sm">
+		<p class="flex justify-center px-2 text-sm">
 			All rights reserved. &copy; Kevérza 2019-{year}.
 		</p>
 		<p class="flex justify-center text-sm">Designed by Kevérza.</p>

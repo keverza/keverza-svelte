@@ -1,6 +1,6 @@
 <script lang="ts"> 
-   import sunO from 'svelte-awesome/icons/sunO';
-	import moonO from 'svelte-awesome/icons/moonO';
+import sunO from 'svelte-awesome/icons/sunO';
+import moonO from 'svelte-awesome/icons/moonO';
 import { createEventDispatcher } from 'svelte';
 
 export let useThemeModeButton = true;

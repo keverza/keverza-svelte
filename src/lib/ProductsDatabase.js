@@ -3,9 +3,10 @@ const Products = [
     id: 1,
     name: 'Madagascar Sambirano',
     href: 'madagascar-sambirano',
-    price: '2.2 eur',
+    price: '2.9',
     imageSrc: '/img/amirali-mirhashemian-RCVIlSXhYI0-unsplash.jpg',
     imageAlt: 'Madagascar Sambirano',
+    quantity: 1,
     story:
       'Giliai Madagascaro džiunglėse, ūkininkų kooperatyvuose auginamos ne tik kakavos pupelės, bet ir mangai, bananai, vanilė, kava. Dėl to kakava įgauna ypatingai vaisinį skonio profilį su subtiliais jazminų bei vanilės, citrinų aromato užuominom. ',
     features: [
@@ -36,10 +37,11 @@ const Products = [
     id: 2,
     name: 'Tanzania Kokoa Kamily',
     href: 'tanzania-kokoa-kamily',
-    price: '2.2 eur',
+    price: '2.5',
     imageSrc: '/img/kyle-hinkson-fuuhb86A-tE-unsplash.jpg',
     imageAlt:
       'Tanzania Kokoa Kamily',
+      quantity: 1,
     story:
       'Kilombero slėnyje, greta Udzungwa kalno nacionalinio parko smulkieji ūkininkai augina nuostabią pilnos skonių paletės kakavą. Saulėje džiovinta ir atidžiai stebima. Kakava Tanzanijoe turi ilgą istoriją ir didelią kakavos auginimo patirtį nuo pat 1880 kai buvo atplukdytos pirmosios pupelės.',
     features: [
@@ -70,10 +72,11 @@ const Products = [
     id: 3,
     name: 'India Idukki',
     href: 'india-idukki',
-    price: '2.2 eur',
+    price: '2.2',
     imageSrc: '/img/tetiana-bykovets-wcH1vEjwmL8-unsplash.jpg',
     imageAlt:
       'India Idukki',
+      quantity: 1,
     story:
       'Žaliasis Idukki slėnis garsus aromatingais prieskoniais ir idealiomis sąlygomis auginti kakavą. Pupelės pasižymi švelnia kremine tekstūra ir turtingais prieskonių ir vaisių aromatais.',
     features: [
@@ -104,10 +107,11 @@ const Products = [
     id: 4,
     name: 'Guatemala Cahabón',
     href: 'guatemala-cahabon',
-    price: '2.2 eur',
+    price: '2.2',
     imageSrc: '/img/tetiana-bykovets-7LKpstdOad0-unsplash.jpg',
     imageAlt:
       'Guatemala Cahabón',
+      quantity: 1,
     story:
       'Cahabón regiono kalvose auginamas kardamonas, cinamonas, čili pipirai ir kakava įgyjanti intensyvius prieskoninius aromatus. Cahabón kakavos pupelės yra intensyvios ir nors nėra labai kompleksiško skonio profilio jos maloniai nustebina vaisine rūgštele, riešutiniu kartumu ir viską užbaiginačiomis karamelės užuominomus.',
     features: [
@@ -138,10 +142,11 @@ const Products = [
     id: 5,
     name: 'São Tome Felis Cacao',
     href: 'sao-tome-felis-cacao',
-    price: '2.2 eur',
+    price: '2.4',
     imageSrc: '/img/michele-blackwell-evRB-x0TJkM-unsplash.jpg',
     imageAlt:
       'São Tome Felis Cacao',
+      quantity: 1,
     story:
       'São Tomé dar vadinama šokolado sala Afrikoje, kurioje buvo pradėtata auginti ir iki šių dienų išsaugoti autentiški pupelių porūšiai. Šiame regione vyrauja amelonado, trinitario ir forastero pupelių porūšiai pupelėms. Jiems būdingas intensyvus kakavos skonis su vaisinėmis natomis pabaigoje.',
     features: [
@@ -173,10 +178,11 @@ const Products = [
     id: 6,
     name: 'Baltasis Aviečių Šokoladas',
     href: 'white-raspberry',
-    price: '2.2 eur',
+    price: '2.3',
     imageSrc: '/img/emy-Rx3QSrG1coc-unsplash.jpg',
     imageAlt:
       'Baltasis Aviečių Šokoladas',
+      quantity: 1,
     story: 'Baltasis šokoladas su vaisiais.',
     features: [
       { name: 'Kilmės šalis', description: '???' },

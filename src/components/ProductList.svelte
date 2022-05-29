@@ -11,16 +11,19 @@
 		{#each Products as product (product.id)}
 			<a sveltekit:prefetch href={`/products/${product.href}`} class="group">
 				<div
-					class=" w-full overflow-hidden rounded-lg bg-gray-200"
+					class=" w-full overflow-hidden rounded-lg"
 				>
-				<div  alt={product.imageAlt} style="background-image: url('{product.imageSrc}')" class="hover:scale-110 ransform transition duration-700 rounded-lg bg-cover bg-center aspect-square" />
-					<!-- <img
-						width="150px"
+				<!-- <div  
+				alt={product.imageAlt} 
+				style="background-image: url('{product.imageSrc}')" 
+				class="hover:scale-110 ransform transition duration-700 rounded-lg bg-cover bg-center aspect-square" />
+				</div> -->
+					<img						
 						src={product.imageSrc}
 						alt={product.imageAlt}
-						class="h-full w-full object-cover object-center group-hover:opacity-75"
-					/> -->
-				</div>
+						class="h-full w-full object-cover object-center group-hover:opacity-75 aspect-square"
+					/>
+				
 				<h3 class="mt-4 text-xl font-light text-gray-900 uppercase tracking-widest ">{product.name}</h3>
 				<p class="mt-1 text-md  text-gray-700 truncate">
 					{product.features[3].name}: {product.features[3].description}
