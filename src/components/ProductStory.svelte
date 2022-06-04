@@ -2,18 +2,17 @@
 	import { fade } from 'svelte/transition';
 	import { blur } from 'svelte/transition';
 
-	import { isOverlayOpen, overlayData } from '../stores/overlayStore';
+	import { isOverlayOpen, isLoading } from '../stores/overlayStore';
+	import StoryImageOverlay from './StoryImageOverlay.svelte';
 	export let product;
 	export let { name, story, features, imageSrc, imageAlt } = product;
 
-	const setOverlayData = (title: string, info: string, imgSrc: string, imgAlt: string) => {
-		overlayData.set({
-			title,
-			info,
-			imgSrc,
-			imgAlt
-		});
-	};
+	let transforms = 'ar_1:1,c_fill,g_center,h_500,w_500';
+
+	function handleClick(id: number) {
+		isOverlayOpen.set(!$isOverlayOpen);
+		isLoading.set(!$isLoading);
+	}
 </script>
 
 <div in:blur class="bg-white">
@@ -39,41 +38,46 @@
 		</div>
 
 		<div
-			class="grid grid-cols-2 grid-rows-2 lg:grid-cols-2 lg:grid-rows-2 gap-4 sm:gap-6 lg:gap-8   "
+			class="grid grid-cols-2 grid-rows-2 lg:grid-cols-2 lg:grid-rows-2 gap-4 sm:gap-6 lg:gap-8 relative   "
 		>
+			{#if $isOverlayOpen}
+				<StoryImageOverlay {imageSrc} {imageAlt} />
+			{/if}
 			<img
+				id="1"
 				on:click={() => {
-					isOverlayOpen.set(!$isOverlayOpen), setOverlayData(name, story, imageSrc, imageAlt);
+					handleClick(1);
 				}}
-				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/ar_1:1,c_fill,g_center,h_500,w_500/c_crop,g_center,w_500/v1653929573/kvrz/${imageSrc}`}
+				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
 				alt={imageAlt}
-				class="h-full w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md"
+				class="h-full transition-all duration-150 w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md"
 			/>
 			<img
+				id="2"
 				on:click={() => {
-					isOverlayOpen.set(!$isOverlayOpen), setOverlayData(name, story, imageSrc, imageAlt);
+					handleClick(2);
 				}}
-				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/ar_1:1,c_fill,g_center,h_500,w_500/c_crop,g_center,w_500/v1653929573/kvrz/${imageSrc}`}
+				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
 				alt={imageAlt}
-				class="h-full w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md"
+				class="h-full transition-all duration-150 w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md "
 			/>
 			<img
+				id="3"
 				on:click={() => {
-					isOverlayOpen.set(!$isOverlayOpen),
-						setOverlayData((name = 'Koks nors kitas tekstas'), story, imageSrc, imageAlt);
+					handleClick(3);
 				}}
-				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/ar_1:1,c_fill,g_center,h_500,w_500/c_crop,g_center,w_500/v1653929573/kvrz/${imageSrc}`}
+				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
 				alt={imageAlt}
-				class="h-full w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md"
+				class="h-full transition-all duration-150 w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md"
 			/>
 			<img
+				id="4"
 				on:click={() => {
-					isOverlayOpen.set(!$isOverlayOpen),
-						setOverlayData((name = 'Info apie k1 nors'), story, imageSrc, imageAlt);
+					handleClick(4);
 				}}
-				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/ar_1:1,c_fill,g_center,h_500,w_500/c_crop,g_center,w_500/v1653929573/kvrz/${imageSrc}`}
+				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
 				alt={imageAlt}
-				class="h-full w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md"
+				class="h-full transition-all duration-150 w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md"
 			/>
 		</div>
 	</div>
