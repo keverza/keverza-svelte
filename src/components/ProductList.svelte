@@ -52,7 +52,7 @@
 						class="h-full w-full object-cover object-center group-hover:opacity-75 aspect-square"
 					/>
 
-					<h3 class="mt-4 text-xl font-light text-gray-900 uppercase tracking-widest ">
+					<h3 class="mt-4 text-xl font-light text-gray-900 uppercase truncate tracking-widest ">
 						{product.name}
 					</h3>
 					<p class="mt-1 text-md  text-gray-700 truncate">

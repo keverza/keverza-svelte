@@ -40,7 +40,7 @@
 					isCartOpen.set(!$isCartOpen);
 				}}
 			>
-				<Icon data={shoppingBag} scale={1.5} />
+				<Icon data={shoppingBag} scale={1.4} />
 			</button>
 
 			<a

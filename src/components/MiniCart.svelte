@@ -44,9 +44,8 @@
 	};
 
 	$: total = $cartData.reduce((sum, product) => sum + product.price * product.quantity, 0);
-	console.log('bendra suma', total, $cartData);
 
-	const totalItems = $cartData.reduce((sum, product) => sum + product.quantity, 0);
+	$: totalItems = $cartData.reduce((sum, product) => sum + product.quantity, 0);
 </script>
 
 <!-- This example requires Tailwind CSS v2.0+ -->
@@ -179,6 +178,10 @@
 						</div>
 
 						<div class="border-t border-gray-200 py-6 px-4 sm:px-6">
+							<div class="flex justify-between text-base font-light text-gray-900">
+								<p />
+								<p>{totalItems} vnt.</p>
+							</div>
 							<div class="flex justify-between text-base font-medium text-gray-900">
 								<p>Viso</p>
 								<p>{formatter.format(total)}</p>

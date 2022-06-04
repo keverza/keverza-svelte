@@ -4,6 +4,7 @@
 	import { blur } from 'svelte/transition';
 	import { isOverlayOpen } from '../stores/overlayStore';
 
+	export let imageText: string;
 	export let imageAlt: string;
 	export let imageSrc: string;
 	let transforms = 'ar_1:1,c_fill,g_center,h_800,w_800';
@@ -21,7 +22,7 @@
 />
 <div
 	transition:blur
-	class="absolute flex flex-col w-full h-full justify-between"
+	class="absolute flex flex-col w-full h-full justify-between z-50"
 	on:click={() => {
 		handleClick();
 	}}
@@ -29,11 +30,11 @@
 	<Icon
 		data={close}
 		scale={3}
-		class="text-zinc-600 hover:text-zinc-800 pr-2 justify-self-end  place-self-end"
+		class="text-zinc-600  cursor-pointer hover:text-zinc-800 pr-2 justify-self-end  place-self-end backdrop-invert "
 	/>
-	<p
-		class="mt-2 text-xl font-light text-gray-100 truncate pb-4 uppercase tracking-widest place-self-center"
+	<div
+		class="pt-3 text-xl bg- w-full font-light text-center bg-gray-50 opacity-70  text-gray-900  truncate pb-4 uppercase tracking-widest place-self-center"
 	>
-		Trumpas aprasas
-	</p>
+		<p>{imageText}</p>
+	</div>
 </div>

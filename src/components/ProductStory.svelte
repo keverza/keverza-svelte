@@ -1,17 +1,19 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
 	import { blur } from 'svelte/transition';
 
 	import { isOverlayOpen, isLoading } from '../stores/overlayStore';
 	import StoryImageOverlay from './StoryImageOverlay.svelte';
+
 	export let product;
 	export let { name, story, features, imageSrc, imageAlt } = product;
 
 	let transforms = 'ar_1:1,c_fill,g_center,h_500,w_500';
 
-	function handleClick(id: number) {
+	let imageText = '...';
+	function handleClick(imgOverlayText: string) {
 		isOverlayOpen.set(!$isOverlayOpen);
 		isLoading.set(!$isLoading);
+		imageText = imgOverlayText;
 	}
 </script>
 
@@ -41,43 +43,44 @@
 			class="grid grid-cols-2 grid-rows-2 lg:grid-cols-2 lg:grid-rows-2 gap-4 sm:gap-6 lg:gap-8 relative   "
 		>
 			{#if $isOverlayOpen}
-				<StoryImageOverlay {imageSrc} {imageAlt} />
+				<StoryImageOverlay {imageSrc} {imageAlt} {imageText} />
 			{/if}
+
 			<img
 				id="1"
 				on:click={() => {
-					handleClick(1);
+					handleClick('mmm... šokoladas');
 				}}
 				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
 				alt={imageAlt}
-				class="h-full transition-all duration-150 w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md"
+				class="h-full cursor-pointer transition-all duration-150 w-full object-cover object-center hover:opacity-75 aspect-square rounded-md"
 			/>
 			<img
 				id="2"
 				on:click={() => {
-					handleClick(2);
+					handleClick('šokoladas kvadratu');
 				}}
 				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
 				alt={imageAlt}
-				class="h-full transition-all duration-150 w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md "
+				class="h-full cursor-pointer transition-all duration-150 w-full object-cover object-center hover:opacity-75 aspect-square rounded-md "
 			/>
 			<img
 				id="3"
 				on:click={() => {
-					handleClick(3);
+					handleClick('saldu kartu kaip du medu');
 				}}
 				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
 				alt={imageAlt}
-				class="h-full transition-all duration-150 w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md"
+				class="h-full cursor-pointer transition-all duration-150 w-full object-cover object-center hover:opacity-75 aspect-square rounded-md"
 			/>
 			<img
 				id="4"
 				on:click={() => {
-					handleClick(4);
+					handleClick('ketvirtas kartas nemeluoja');
 				}}
 				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
 				alt={imageAlt}
-				class="h-full transition-all duration-150 w-full object-cover object-center group-hover:opacity-75 aspect-square rounded-md"
+				class="h-full cursor-pointer transition-all duration-150 w-full object-cover object-center hover:opacity-75 aspect-square rounded-md"
 			/>
 		</div>
 	</div>
