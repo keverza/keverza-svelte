@@ -4,7 +4,7 @@ const Products = [
     name: 'Madagascar Sambirano',
     href: 'madagascar-sambirano',
     price: '2.9',
-    imageSrc: '/img/amirali-mirhashemian-RCVIlSXhYI0-unsplash.jpg',
+    imageSrc: 'amirali-mirhashemian-RCVIlSXhYI0-unsplash_ns835j.jpg',
     imageAlt: 'Madagascar Sambirano',
     quantity: 1,
     story:
@@ -38,7 +38,7 @@ const Products = [
     name: 'Tanzania Kokoa Kamily',
     href: 'tanzania-kokoa-kamily',
     price: '2.5',
-    imageSrc: '/img/kyle-hinkson-fuuhb86A-tE-unsplash.jpg',
+    imageSrc: 'kyle-hinkson-fuuhb86A-tE-unsplash_tkowhf.jpg',
     imageAlt:
       'Tanzania Kokoa Kamily',
       quantity: 1,
@@ -73,7 +73,7 @@ const Products = [
     name: 'India Idukki',
     href: 'india-idukki',
     price: '2.2',
-    imageSrc: '/img/tetiana-bykovets-wcH1vEjwmL8-unsplash.jpg',
+    imageSrc: 'tetiana-bykovets-wcH1vEjwmL8-unsplash_t5soul.jpg',
     imageAlt:
       'India Idukki',
       quantity: 1,
@@ -108,7 +108,7 @@ const Products = [
     name: 'Guatemala Cahabón',
     href: 'guatemala-cahabon',
     price: '2.2',
-    imageSrc: '/img/tetiana-bykovets-7LKpstdOad0-unsplash.jpg',
+    imageSrc: 'tetiana-bykovets-7LKpstdOad0-unsplash_guhklw.jpg',
     imageAlt:
       'Guatemala Cahabón',
       quantity: 1,
@@ -143,7 +143,7 @@ const Products = [
     name: 'São Tome Felis Cacao',
     href: 'sao-tome-felis-cacao',
     price: '2.4',
-    imageSrc: '/img/michele-blackwell-evRB-x0TJkM-unsplash.jpg',
+    imageSrc: 'michele-blackwell-evRB-x0TJkM-unsplash_uvn1l3.jpg',
     imageAlt:
       'São Tome Felis Cacao',
       quantity: 1,
@@ -179,7 +179,7 @@ const Products = [
     name: 'Baltasis Aviečių Šokoladas',
     href: 'white-raspberry',
     price: '2.3',
-    imageSrc: '/img/emy-Rx3QSrG1coc-unsplash.jpg',
+    imageSrc: 'emy-Rx3QSrG1coc-unsplash_vgtdbx.jpg',
     imageAlt:
       'Baltasis Aviečių Šokoladas',
       quantity: 1,

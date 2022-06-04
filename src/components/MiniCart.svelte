@@ -4,18 +4,7 @@
     import { productStore } from '../stores/productStore';
     import {formatter} from '../lib/utils/helpers'
 
-    const products = [
-  {
-    id: 99,
-    name: 'Throwback Hip Bag',
-    href: '#',
-    color: 'Salmon',
-    price: '$90.00',
-    quantity: 1,
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-    imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-  }
-]
+ 
 $cartData = [...$cartData]
 	
 	const addToCart = (product) => {
@@ -94,7 +83,7 @@ $cartData = [...$cartData]
             <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
               <div class="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
                 <div class="flex items-start justify-between">
-                  <h2 class="text-lg font-medium text-gray-900" id="slide-over-title">Shopping cart</h2>
+                  <h2 class="text-lg font-medium text-gray-900" id="slide-over-title">Pirkinių krepšelis</h2>
                   <div class="ml-3 flex h-7 items-center">
                     <button on:click={()=>{isCartOpen.set(!$isCartOpen)}} type="button" class="-m-2 p-2 text-gray-400 hover:text-gray-500">
                       <span class="sr-only">Close panel</span>
@@ -108,7 +97,7 @@ $cartData = [...$cartData]
   
                 <div class="mt-8">
                   <div class="flow-root">
-                    <ul role="list" class="-my-6 divide-y divide-gray-200">
+                    <ul  class="-my-6 divide-y divide-gray-200">
 
                         {#each $cartData as product}
                         <li class="flex py-6">
@@ -120,7 +109,7 @@ $cartData = [...$cartData]
                           <div>
                             <div class="flex justify-between text-base font-medium text-gray-900">
                               <h3>
-                                <a href="#"> {product.name} </a>
+                                <a href={`/products/${product.href}`}> {product.name} </a>
                               </h3>
                               <p class="ml-4">{formatter.format(product.price)}</p>
                             </div>
@@ -130,7 +119,7 @@ $cartData = [...$cartData]
                             <p class="text-gray-500">Kiekis: {product.quantity}</p>
   
                             <div class="flex gap-x-2">
-                              <button on:click={()=>{removeItem(product)}} type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Pašalinti</button>
+                              <button on:click={()=>{removeItem(product)}} type="button" class="font-medium text-red-600 hover:text-indigo-500">Pašalinti</button>
                               <button on:click={()=>{addItem(product)}} type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Pridėti</button>
                             </div>
                           </div>

@@ -53,7 +53,7 @@ import { onMount, tick } from 'svelte';
 		sveltekit:prefetch
 			href="/" 
 			aria-label="link to homepage">
-			<Logo showSubheading={false} fill={"rgb(82,82,82)"} className="justify-center h-20 m-auto  pb-0" />
+			<Logo showSubheading={true} fill={"rgb(82,82,82)"} className="justify-center h-20 m-auto  pb-0" />
 		</a>
 		<p class="text-sm pt-0 uppercase">Lietuviškas nuo plytelės iki pupelės šokoladas</p>
 	</div>
