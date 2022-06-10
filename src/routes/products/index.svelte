@@ -18,35 +18,23 @@
 	}
 </script>
 
-<script>
-	export /**
-	 * @type {any}
-	 */
-	let Products;
+<script lang="ts">
+	export let Products: any;
 
 	import ProductList from '../../components/ProductList.svelte';
-	import About from '../about.svelte';
 
-	// //search bar
+	// search bar functionality
 	let searchTerm = '';
-	let filteredProducts = [...Products];
-	let filteredProduct = [];
-	let filteredNote = [];
-	const test = [
-		'madagascar sambirano',
-		'tanzania kokoa kamily',
-		'india idukki',
-		'guatemala cahabón',
-		'são tome felis cacao',
-		'baltasis aviečių šokoladas'
-	];
-	// product.name.toLowerCase().includes(searchTerm.toLowerCase());
+	let filteredProduct: any = [];
+
 	$: {
 		if (searchTerm) {
 			filteredProduct = Products.filter(
 				(product) =>
 					product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-					product.features[3].description.toLowerCase().includes(searchTerm.toLowerCase())
+					product.features[1].description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+					product.features[3].description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+					product.features[5].description.toLowerCase().includes(searchTerm.toLowerCase())
 			);
 		} else {
 			filteredProduct = [...Products];
@@ -56,18 +44,21 @@
 </script>
 
 <div class="flex flex-col justify-center items-center w-full">
-	<label for="search">Paieška:</label>
+	<label for="search" class="w-3/4">Paieška:</label>
 	<input
 		id="search"
-		class="w-3/4 rounded-md text-lg border border-gray-200 mx-10 focus:outline-none focus:border-gray-500"
+		class="w-3/4 rounded-md text-lg border border-gray-200 mx-10 focus:outline-none focus:border-gray-500 mb-6 py-2"
 		type="text"
 		placeholder=" Įveskite regioną ar norimą skonį. Pvz. Madagascar"
 		bind:value={searchTerm}
 	/>
-
-	{#each filteredProduct as product}
-		<p class="pl-5">{product.name}</p>
-	{/each}
+	<ul class="">
+		{#each filteredProduct as product}
+			<li class="hover:bg-gray-100 w-full px-4 py-1 text-center">
+				<a href={`/products/${product.href}`}> {product.name}</a>
+			</li>
+		{/each}
+	</ul>
 </div>
 
 {#if filteredProduct.length === 0}

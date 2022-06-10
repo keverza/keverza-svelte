@@ -22,7 +22,7 @@
 />
 <div
 	transition:blur
-	class="absolute flex flex-col w-full h-full justify-between z-50"
+	class="absolute flex flex-col w-full h-full justify-between z-10"
 	on:click={() => {
 		handleClick();
 	}}
