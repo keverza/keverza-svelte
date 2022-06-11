@@ -4,6 +4,7 @@ export const isOverlayOpen = writable(false)
 export const isLoading = writable(false)
 
 export const isProductOpen = writable(true)
+export const curProduct = writable({})
 
 
 export const isCartOpen = writable(false)

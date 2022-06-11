@@ -19,7 +19,7 @@
 			class="gap-y10 grid grid-cols-2 justify-center gap-x-6 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 xl:gap-x-8"
 		>
 			{#each $filteredProduct as product (product.id)}
-				<RecommendedCard {product} />
+				<RecommendedCard {product} on:promise />
 			{/each}
 		</div>
 	</div>
