@@ -30,7 +30,7 @@
 	<Icon
 		data={close}
 		scale={3}
-		class="text-zinc-600  cursor-pointer hover:text-zinc-800 pr-2 justify-self-end  place-self-end backdrop-invert "
+		class="text-zinc-600  cursor-pointer hover:text-zinc-800 pr-2 justify-self-end  place-self-end driba "
 	/>
 	<div
 		class="pt-3 text-xl bg- w-full font-light text-center bg-gray-50 opacity-70  text-gray-900  truncate pb-4 uppercase tracking-widest place-self-center"

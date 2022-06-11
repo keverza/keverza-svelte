@@ -1,13 +1,11 @@
 <script lang="ts">
-	// test
-
 	import { blur } from 'svelte/transition';
 
 	import { isOverlayOpen, isLoading } from '../stores/overlayStore';
 	import StoryImageOverlay from './StoryImageOverlay.svelte';
 
 	export let product;
-	export let { name, story, features, imageSrc, imageAlt } = product;
+	export let { name, story, features, imageSrc, imageAlt, href } = product;
 
 	let transforms = 'ar_1:1,c_fill,g_center,h_500,w_500';
 
@@ -19,7 +17,7 @@
 	}
 </script>
 
-<div in:blur class="bg-white">
+<div in:blur|local class="bg-white">
 	<div
 		class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8 "
 	>
@@ -55,7 +53,9 @@
 				}}
 				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
 				alt={imageAlt}
-				class="h-full cursor-pointer transition-all duration-150 w-full object-cover object-center hover:opacity-75 aspect-square rounded-md"
+				class="{$isOverlayOpen
+					? 'invisible'
+					: 'hover:opacity-75'}  cursor-pointer transition-all duration-150  object-cover object-center  aspect-square rounded-md"
 			/>
 			<img
 				id="2"
@@ -64,7 +64,9 @@
 				}}
 				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
 				alt={imageAlt}
-				class="h-full cursor-pointer transition-all duration-150 w-full object-cover object-center hover:opacity-75 aspect-square rounded-md "
+				class="{$isOverlayOpen
+					? 'invisible'
+					: 'hover:opacity-75'}  cursor-pointer transition-all duration-150  object-cover object-center  aspect-square rounded-md "
 			/>
 			<img
 				id="3"
@@ -73,7 +75,9 @@
 				}}
 				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
 				alt={imageAlt}
-				class="h-full cursor-pointer transition-all duration-150 w-full object-cover object-center hover:opacity-75 aspect-square rounded-md"
+				class="{$isOverlayOpen
+					? 'invisible'
+					: 'hover:opacity-75'}  cursor-pointer transition-all duration-150  object-cover object-center  aspect-square rounded-md"
 			/>
 			<img
 				id="4"
@@ -82,11 +86,15 @@
 				}}
 				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
 				alt={imageAlt}
-				class="h-full cursor-pointer transition-all duration-150 w-full object-cover object-center hover:opacity-75 aspect-square rounded-md"
+				class="{$isOverlayOpen
+					? 'invisible'
+					: 'hover:opacity-75'}  cursor-pointer transition-all duration-150  object-cover object-center  aspect-square rounded-md"
 			/>
 		</div>
 	</div>
 </div>
+
+<a href="/products/{href}/poll" class="text-center min-w-full">Poll</a>
 
 <style>
 </style>

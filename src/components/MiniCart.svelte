@@ -1,6 +1,6 @@
 <script>
 	import { fly, fade } from 'svelte/transition';
-	import { isCartOpen, cartData } from '../stores/overlayStore';
+	import { isCartOpen, cartData, cartTotalItems } from '../stores/overlayStore';
 	import { productStore } from '../stores/productStore';
 	import { formatter } from '../lib/utils/helpers';
 
@@ -44,8 +44,6 @@
 	};
 
 	$: total = $cartData.reduce((sum, product) => sum + product.price * product.quantity, 0);
-
-	$: totalItems = $cartData.reduce((sum, product) => sum + product.quantity, 0);
 </script>
 
 <!-- This example requires Tailwind CSS v2.0+ -->
@@ -122,6 +120,10 @@
 
 							<div class="mt-8">
 								<div class="flow-root">
+									{#if !$cartTotalItems}
+										<p>Jūsų krepšelis tuščias</p>
+									{/if}
+
 									<ul class="-my-6 divide-y divide-gray-200">
 										{#each $cartData as product}
 											<li class="flex py-6">
@@ -180,18 +182,21 @@
 						<div class="border-t border-gray-200 py-6 px-4 sm:px-6">
 							<div class="flex justify-between text-base font-light text-gray-900">
 								<p />
-								<p>{totalItems} vnt.</p>
+								<p>{$cartTotalItems} vnt.</p>
 							</div>
 							<div class="flex justify-between text-base font-medium text-gray-900">
 								<p>Viso</p>
 								<p>{formatter.format(total)}</p>
 							</div>
-							<p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+							<p class="mt-0.5 text-sm text-gray-500">
+								Siuntimo kaina apskaičiuojama kitame žingsnyje
+							</p>
 							<div class="mt-6">
 								<a
+									disabled={!$cartTotalItems}
 									href="#"
-									class="flex items-center justify-center rounded-md border border-transparent bg-gray-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-gray-900"
-									>Checkout</a
+									class="  flex items-center justify-center rounded-md border border-transparent bg-gray-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-gray-900"
+									>Toliau</a
 								>
 							</div>
 							<div class="mt-6 flex justify-center text-center text-sm text-gray-500">

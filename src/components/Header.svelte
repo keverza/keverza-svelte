@@ -6,12 +6,13 @@
 
 	import Logo from './Logo.svelte';
 
-	import { isCartOpen, cartData } from '../stores/overlayStore';
+	import { isCartOpen, cartTotalItems, cartData } from '../stores/overlayStore';
 	// import darkModeToggle from './darkModeToggle.svelte';
 
 	//subscribe to page store and track its changes
 	import { page } from '$app/stores';
 	$: ({ url } = $page);
+	$: $cartTotalItems = $cartData.reduce((sum, product) => sum + product.quantity, 0);
 </script>
 
 <svelte:head>
@@ -40,7 +41,20 @@
 					isCartOpen.set(!$isCartOpen);
 				}}
 			>
-				<Icon data={shoppingBag} scale={1.4} />
+				<div class="relative">
+					<!-- show item count in cart if not empty -->
+					{#if $cartTotalItems}
+						<div
+							class="absolute h-4 w-4 bg-orange-500 rounded-full flex justify-center items-center -right-1 -top-1"
+						>
+							<!-- choose different font for numbers -->
+							<span class="absolute text-white font-semibold text-xs p-0 m-0  "
+								>{$cartTotalItems}</span
+							>
+						</div>
+					{/if}
+					<Icon data={shoppingBag} scale={1.4} />
+				</div>
 			</button>
 
 			<a

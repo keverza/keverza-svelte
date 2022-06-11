@@ -33,6 +33,7 @@
   },
   "type": "module",
   "dependencies": {
+    "chart.js": "^3.8.0",
     "svelte-awesome": "^3.0.0"
   }
 }

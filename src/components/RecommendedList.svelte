@@ -1,12 +1,12 @@
-<script>
-	export let url;
+<script lang="ts">
+	export let url: string;
 	import { productStore, filteredProduct } from '../stores/productStore';
 	import RecommendedCard from './RecommendedCard.svelte';
 
-	let current = url.pathname;
+	// let current = url.pathname;
 
 	$: {
-		$filteredProduct = $productStore.filter((product) => `/products/${product.href}` !== current);
+		$filteredProduct = $productStore.filter((product) => product.href !== url);
 	}
 </script>
 
