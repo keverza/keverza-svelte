@@ -81,6 +81,8 @@
 		console.log('promise handler', e.detail);
 		setTimeout(() => (promise = refresh()), 100);
 	}
+	// Maybe it would help with component update?
+	// import { afterUpdate } from 'svelte'
 </script>
 
 <!-- <div class="flex flex-row justify-center items-center">
@@ -95,3 +97,9 @@
 	<AddToCart {product} />
 	<RecommendedList {url} on:promise={handlePromise} />
 {/await}
+
+<a
+	href="/products/alt"
+	class="flex justify-center items-center text-center w-full p-2 border  hover:bg-slate-100"
+	><p>Kitas dizainas</p>
+</a>
