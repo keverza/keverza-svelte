@@ -9,7 +9,7 @@ export async function get({params}) {
     if (productArr){
     return {        
         status: 200,       
-        body:{productArr}, 
+        body:productArr[0], 
         headers: {
             "content-type": "application/json",
             "accept":"application/json"

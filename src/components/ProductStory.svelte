@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { blur } from 'svelte/transition';
-
 	import { isOverlayOpen, isLoading } from '../stores/overlayStore';
 	import StoryImageOverlay from './StoryImageOverlay.svelte';
 
 	export let product;
-	export let { name, story, features, imageSrc, imageAlt, href } = product;
+	//destructured data does not dynamically update for some reason
+	// let { name, story, features, imageSrc, imageAlt, href } = product;
 
 	let transforms = 'ar_1:1,c_fill,g_center,h_500,w_500';
 
@@ -15,6 +15,9 @@
 		isLoading.set(!$isLoading);
 		imageText = imgOverlayText;
 	}
+
+	//console
+	$: console.log('from productStory: ', product.name);
 </script>
 
 <div in:blur|local class="bg-white">
@@ -23,12 +26,12 @@
 	>
 		<div>
 			<h2 class="text-3xl font-light tracking-tight text-gray-900 sm:text-4xl uppercase">
-				{name}
+				{product.name}
 			</h2>
-			<p class="mt-4 text-gray-500">{story}</p>
+			<p class="mt-4 text-gray-500">{product.story}</p>
 
 			<dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-				{#each features as feature (feature.name)}
+				{#each product.features as feature (feature.name)}
 					<div class="border-t border-gray-200 pt-4">
 						<dt class="font-light text-gray-900 uppercase">{feature.name}</dt>
 						<dd class="mt-2 text-sm text-gray-500 font-medium">
@@ -43,7 +46,7 @@
 			class="grid grid-cols-2 grid-rows-2 lg:grid-cols-2 lg:grid-rows-2 gap-4 sm:gap-6 lg:gap-8 relative   "
 		>
 			{#if $isOverlayOpen}
-				<StoryImageOverlay {imageSrc} {imageAlt} {imageText} />
+				<StoryImageOverlay imageSrc={product.imageSrc} imageAlt={product.imageAlt} {imageText} />
 			{/if}
 
 			<img
@@ -51,8 +54,8 @@
 				on:click={() => {
 					handleClick('mmm... šokoladas');
 				}}
-				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
-				alt={imageAlt}
+				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${product.imageSrc}`}
+				alt={product.imageAlt}
 				class="{$isOverlayOpen
 					? 'invisible'
 					: 'hover:opacity-75'}  cursor-pointer transition-all duration-150  object-cover object-center  aspect-square rounded-md"
@@ -62,8 +65,8 @@
 				on:click={() => {
 					handleClick('šokoladas kvadratu');
 				}}
-				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
-				alt={imageAlt}
+				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${product.imageSrc}`}
+				alt={product.imageAlt}
 				class="{$isOverlayOpen
 					? 'invisible'
 					: 'hover:opacity-75'}  cursor-pointer transition-all duration-150  object-cover object-center  aspect-square rounded-md "
@@ -73,8 +76,8 @@
 				on:click={() => {
 					handleClick('saldu kartu kaip du medu');
 				}}
-				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
-				alt={imageAlt}
+				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${product.imageSrc}`}
+				alt={product.imageAlt}
 				class="{$isOverlayOpen
 					? 'invisible'
 					: 'hover:opacity-75'}  cursor-pointer transition-all duration-150  object-cover object-center  aspect-square rounded-md"
@@ -84,8 +87,8 @@
 				on:click={() => {
 					handleClick('ketvirtas kartas nemeluoja');
 				}}
-				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${imageSrc}`}
-				alt={imageAlt}
+				src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${product.imageSrc}`}
+				alt={product.imageAlt}
 				class="{$isOverlayOpen
 					? 'invisible'
 					: 'hover:opacity-75'}  cursor-pointer transition-all duration-150  object-cover object-center  aspect-square rounded-md"
@@ -94,7 +97,10 @@
 	</div>
 </div>
 
-<a href="/products/{href}/poll" class="text-center min-w-full">Poll</a>
+<a
+	href="/products/{product.href}/poll"
+	class="text-center min-w-full border p-4 bg-yellow-300 font-semibold">Poll</a
+>
 
 <style>
 </style>
