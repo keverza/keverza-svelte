@@ -3,13 +3,13 @@ import Products from '$lib/ProductsDatabase'
 
 export async function get({params}) {
     //connect to db & get data 
-    console.log("json from endpoint in routes: ",params.product);   
-    const productArr = Products.filter((item)=> item.href === params.product)    
+    console.log("json from shadow endpoint in routes: ",params.product);   
+    const productEndpoint = Products.filter((item)=> item.href === params.product)    
 
-    if (productArr){
+    if (productEndpoint){
     return {        
         status: 200,       
-        body:{productArr}, 
+        body:{productEndpoint}, 
         headers: {
             "content-type": "application/json",
             "accept":"application/json"
