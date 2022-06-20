@@ -21,7 +21,7 @@
 
 <!-- Display header when not on home page -->
 {#if url.pathname !== '/'}
-	<div class="flex flex-col h-20 min-w-full items-center justify-center bg-white">
+	<div class="flex flex-col h-20 min-w-full items-center justify-center ---bg-white">
 		<a
 			class="flex h-20 min-w-content items-center justify-center "
 			sveltekit:prefetch

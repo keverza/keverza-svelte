@@ -10,7 +10,7 @@ const Products = [
     story:
       'Giliai Madagascaro džiunglėse, ūkininkų kooperatyvuose auginamos ne tik kakavos pupelės, bet ir mangai, bananai, vanilė, kava. Dėl to kakava įgauna ypatingai vaisinį skonio profilį su subtiliais jazminų bei vanilės, citrinų aromato užuominom. ',
     features: [
-      { name: 'Kilmės šalis', description: 'Madagascar Sambirano' },
+      { name: 'Kilmės šalis', description: 'Madagascar, Sambirano' },
       {
         name: 'Porūšis',
         description: 'Trinitario, Criollo ir Forastero mišinys',
@@ -45,7 +45,7 @@ const Products = [
     story:
       'Kilombero slėnyje, greta Udzungwa kalno nacionalinio parko smulkieji ūkininkai augina nuostabią pilnos skonių paletės kakavą. Saulėje džiovinta ir atidžiai stebima. Kakava Tanzanijoe turi ilgą istoriją ir didelią kakavos auginimo patirtį nuo pat 1880 kai buvo atplukdytos pirmosios pupelės.',
     features: [
-      { name: 'Kilmės šalis', description: 'Tanzania Kilombero Udzungwa' },
+      { name: 'Kilmės šalis', description: 'Tanzania, Kilombero Udzungwa' },
       {
         name: 'Porūšis',
         description: 'Trinitario ir Forastero',
@@ -80,7 +80,7 @@ const Products = [
     story:
       'Žaliasis Idukki slėnis garsus aromatingais prieskoniais ir idealiomis sąlygomis auginti kakavą. Pupelės pasižymi švelnia kremine tekstūra ir turtingais prieskonių ir vaisių aromatais.',
     features: [
-      { name: 'Kilmės šalis', description: 'India Idukki' },
+      { name: 'Kilmės šalis', description: 'India, Idukki' },
       {
         name: 'Porūšis',
         description: 'Trinitario ir Criollo',
@@ -115,7 +115,7 @@ const Products = [
     story:
       'Cahabón regiono kalvose auginamas kardamonas, cinamonas, čili pipirai ir kakava įgyjanti intensyvius prieskoninius aromatus. Cahabón kakavos pupelės yra intensyvios ir nors nėra labai kompleksiško skonio profilio jos maloniai nustebina vaisine rūgštele, riešutiniu kartumu ir viską užbaiginačiomis karamelės užuominomus.',
     features: [
-      { name: 'Kilmės šalis', description: 'Guatemala Cahabón' },
+      { name: 'Kilmės šalis', description: 'Guatemala, Cahabón' },
       {
         name: 'Porūšis',
         description: 'Trinitario, UF-667 ',

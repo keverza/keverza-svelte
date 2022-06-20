@@ -1,1 +1,0 @@
-<p>kitas dizainas</p>
