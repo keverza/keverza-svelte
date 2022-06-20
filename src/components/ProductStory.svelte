@@ -101,6 +101,10 @@
 	href="/products/{product.href}/poll"
 	class="text-center min-w-full border p-4 bg-yellow-300 font-semibold">Poll</a
 >
+<a
+	href="/products/{product.href}/alt"
+	class="text-center min-w-full border p-4 bg-yellow-300 font-semibold">kitas dizainas</a
+>
 
 <style>
 </style>

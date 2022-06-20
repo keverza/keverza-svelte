@@ -89,15 +89,9 @@
 
 	// function handleClick() {
 	// 	promise = getData();
-	// }
+	// }unsp
 </script>
 
 <ProductStory {product} />
 <AddToCart {product} />
 <RecommendedList {url} />
-
-<a
-	href="/products/alt"
-	class="flex justify-center items-center text-center w-full p-2 border font-medium bg-amber-300  hover:bg-slate-100"
-	><p>Kitas dizainas</p>
-</a>
