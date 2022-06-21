@@ -11,7 +11,7 @@
 	>
 		{#each Products as product (product.id)}
 			<a sveltekit:prefetch href={`/products/${product.href}`} class="group">
-				<div class=" w-full overflow-hidden rounded-lg">
+				<div class=" w-full overflow-hidden rounded-sm">
 					<img
 						src={`https://res.cloudinary.com/dpbpnidgc/image/upload/${transforms}/v1653929573/kvrz/${product.imageSrc}`}
 						alt={product.imageAlt}
