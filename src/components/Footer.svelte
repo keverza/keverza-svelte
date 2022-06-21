@@ -23,31 +23,16 @@
 					>Produktai</a
 				>
 			</li>
-			<li>
-				<a sveltekit:prefetch href="/payment" class="link" aria-label={'Footer tags link'}
-					>Apmokėjimas</a
-				>
-			</li>
-			<li>
-				<a sveltekit:prefetch href="/map" class="link" aria-label={'Footer tags link'}>Žemėlapis</a>
-			</li>
 		</ul>
 		<ul
 			class="flex flex-col w-1/2 min-w-fit  gap-x-5  px-2 items-center md:items-end justify-self-center md:justify-self-end space-y-4"
 		>
 			<li>
-				<a sveltekit:prefetch href="/b2b" class="link" aria-label={'Footer tags link'}>Verslui</a>
-			</li>
-			<li>
-				<a sveltekit:prefetch href="/warranty" class="link" aria-label={'Footer tags link'}
-					>Kokybės garantija</a
+				<a sveltekit:prefetch href="/faq-quality" class="link" aria-label={'Footer tags link'}
+					>D. U. K.</a
 				>
 			</li>
-			<li>
-				<a sveltekit:prefetch href="/refund" class="link" aria-label={'Footer tags link'}
-					>Pinigų grąžinimas</a
-				>
-			</li>
+
 			<li>
 				<a sveltekit:prefetch href="/contact" class="link" aria-label={'Footer tags link'}
 					>Kontaktai</a
@@ -65,7 +50,7 @@
 					className="justify-center h-20 m-auto  pb-0"
 				/>
 			</a>
-			<p class="text-sm text-center pt-0 uppercase">
+			<p class="text-sm text-center pt-2 uppercase">
 				Lietuviškas nuo plytelės iki pupelės šokoladas
 			</p>
 		</div>

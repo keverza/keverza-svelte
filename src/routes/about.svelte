@@ -98,10 +98,13 @@
 				reikalingas pavėsis ir užuovėja, didelė drėgmė ir šiluma. Žinios apie kakavą Europą pirmą
 				kartą pasiekė tik 16a., o jo įsigyti galėjo tik aukštuomenė. Iki tol šokoladas buvo žinomas
 				tik Amerikoje ir buvo vartojams religinėse ceremonijose kaip rūpiai maltas, kartus gėrimas
-				xocolatl. Prireikė 300 metų ir šiek tiek sėkmės, kad šokoladas taptų švelnia, mums gerai
-				pažįstama, plytele. Visai atsitiktinai šokolado meistras pamiršęs išjungti kakavos malimo
-				mašiną ryte sunerimo, kad bus sugadinęs visą šokolado partiją, tačiau paragavęs suprato, kad
-				atrado kažką nepakartojamo.
+				<em>xocolatl</em>.
+			</p>
+			<p>
+				Prireikė 300 metų ir šiek tiek sėkmės, kad šokoladas taptų švelnia, mums gerai pažįstama,
+				plytele. Visai atsitiktinai šokolado meistras pamiršęs išjungti kakavos malimo mašiną ryte
+				sunerimo, kad bus sugadinęs visą šokolado partiją, tačiau paragavęs suprato, kad atrado
+				kažką nepakartojamo.
 			</p>
 			<h3 class="">Kakavos įvairovė</h3>
 			<div>
@@ -224,6 +227,7 @@
 				</ol>
 			</div>
 			<div>
+				<h4>Rekomendacijos</h4>
 				<ul>
 					<li>
 						Vienu ypu šokolado nereikia atsikąsti per daug, degustacijai pakanka nedidelio gabalėlio
@@ -258,18 +262,18 @@
 
 				<ul>
 					<li>
-						- į pojūtį rankose - jo tirpumas ar kietumas, tvirtumą; - į kvapo intensyvumą ar
+						į pojūtį rankose - jo tirpumas ar kietumas, tvirtumą; - į kvapo intensyvumą ar
 						kompleksiškumą;
 					</li>
-					<li>- į skonį - tai šokolado pamatas (sūru, saldu, kartu, rūgštu ir umami);</li>
+					<li>į skonį - tai šokolado pamatas (sūru, saldu, kartu, rūgštu ir umami);</li>
 					<li>
-						- į poskonį - tai subtilesnė šokolado dalis, kurią jaučiame naudodamiesi uosle ir nuriję
+						į poskonį - tai subtilesnė šokolado dalis, kurią jaučiame naudodamiesi uosle ir nuriję
 						maistą. Poskoniui apibūdinti ne visada randame tinkamus žodžius ir dažnai pasitelkiame
 						spalvas ar kitas asociacijas;
 					</li>
-					<li>- į tekstūrą - paprastai apibūdinama kaip švelni, rūpi ar lipni;</li>
+					<li>į tekstūrą - paprastai apibūdinama kaip švelni, rūpi ar lipni;</li>
 					<li>
-						-į pojūtį burnoje - tai subtilesnes tekstūros dalis (intensyvi, sodri, kreminė, švari).
+						į pojūtį burnoje - tai subtilesnes tekstūros dalis (intensyvi, sodri, kreminė, švari).
 						Smulkiau sumaltas šokoladas gali veltis burnoje, o daug sviesto turintis tirps švariai.
 					</li>
 				</ul>

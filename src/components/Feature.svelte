@@ -11,12 +11,12 @@
 
 <svelte:window bind:scrollY={scroll} />
 <p>{scroll}</p>
-<div class="flex min-h-screen flex-col items-start justify-center w-full">
+<div class="flex min-h-screen flex-col items-center justify-center ">
 	<div
 		use:viewport
 		on:enterViewport={() => (isVisible = true)}
 		on:exitViewport={() => (isVisible = false)}
-		class="flex flex-col text-3xl text-center w-full px-10"
+		class="flex flex-col text-3xl text-center w-full px-10 max-w-4xl "
 	>
 		<!-- <span style:transform={`translate3d(0, ${(scroll - 2500) * 2}px, 0)`}
 			>Kiekvienas mūsų šokolado gabalėlis</span
