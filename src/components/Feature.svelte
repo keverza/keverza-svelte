@@ -4,6 +4,7 @@
 
 	import viewport from '../lib/utils/useViewportAction';
 	let scroll: number;
+	let scroll2: number;
 
 	let isVisible = false;
 	$: console.log(isVisible);

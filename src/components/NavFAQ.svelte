@@ -70,7 +70,6 @@
 </div>
 
 <div class="flex min-h-screen flex-col items-start justify-center py-2">
-	<div class="h-10" />
 	<div class="mx-auto text-3xl">
 		<svelte:component this={selected.component} />
 	</div>

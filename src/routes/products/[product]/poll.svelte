@@ -6,13 +6,15 @@
 	import { page } from '$app/stores';
 
 	import ChartRadar from '../../../components/ChartRadar.svelte';
+	import ChartLabels from '../../../components/ChartLabels.svelte';
+
 	let curProduct = $productStore.filter((product) => product.href === $page.params.product);
 
 	const handleSubmit = () => {
-		console.log('submit');
+		console.log('submit', data);
 	};
 
-	let data = [10, 20, 30, 40, 50, 60, 70];
+	let data = [80, 80, 80, 80, 80, 80, 80];
 </script>
 
 <div class="h-20" />
@@ -20,10 +22,10 @@
 	<h2>Apklausa</h2>
 	<p>Įvertinkite <span class="font-semibold"> {curProduct[0].name}</span> šokolado skonį</p>
 </div>
-
+<ChartLabels />
 <ChartRadar {data} />
 
-<form on:submit|preventDefault={handleSubmit} class="flex flex-col justify-between items-center">
+<!-- <form on:submit|preventDefault={handleSubmit} class="flex flex-col justify-between items-center">
 	<label for="a">a:</label>
 	<input
 		type="range"
@@ -32,56 +34,6 @@
 		id="a"
 		class="border border-gray-600 rounded-lg mx-2 mb-4"
 		bind:value={data[0]}
-	/>
-
-	<label for="b">b:</label>
-	<input
-		type="range"
-		min="0"
-		max="100"
-		id="b"
-		class="border border-gray-600 rounded-lg mx-2 mb-4"
-		bind:value={data[1]}
-	/>
-
-	<label for="c">c:</label>
-	<input
-		type="range"
-		min="0"
-		max="100"
-		id="c"
-		class="border border-gray-600 rounded-lg mx-2 mb-4"
-		bind:value={data[2]}
-	/>
-
-	<label for="d">d:</label>
-	<input
-		type="range"
-		min="0"
-		max="100"
-		id="d"
-		class="border border-gray-600 rounded-lg mx-2 mb-4"
-		bind:value={data[3]}
-	/>
-
-	<label for="e">e:</label>
-	<input
-		type="range"
-		min="0"
-		max="100"
-		id="e"
-		class="border border-gray-600 rounded-lg mx-2 mb-4"
-		bind:value={data[4]}
-	/>
-
-	<label for="f">f:</label>
-	<input
-		type="range"
-		min="0"
-		max="100"
-		id="f"
-		class="border border-gray-600 rounded-lg mx-2 mb-4"
-		bind:value={data[5]}
 	/>
 
 	<label for="g">g:</label>
@@ -93,7 +45,7 @@
 		class="border border-gray-600 rounded-lg mx-2 mb-4"
 		bind:value={data[6]}
 	/>
-</form>
+</form> -->
 
 <form on:submit|preventDefault={handleSubmit} class="flex flex-col justify-between items-center">
 	<label for="text">Jūsų nuomonė:</label>
