@@ -1,1 +1,5 @@
-<div class="mx-auto">Puslapis verslui kuriamas</div>
+<script>
+	import { fade } from 'svelte/transition';
+</script>
+
+<div in:fade={{ delay: 500 }} out:fade|local class="mx-auto">Puslapis verslui kuriamas</div>
