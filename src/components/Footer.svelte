@@ -44,11 +44,7 @@
 	{#if bodyHeight > 1000}
 		<div class="flex flex-col pt-10 justify-center items-center">
 			<a sveltekit:prefetch href="/" aria-label="link to homepage">
-				<Logo
-					showSubheading={true}
-					fill={'rgb(82,82,82)'}
-					className="justify-center h-20 m-auto  pb-0"
-				/>
+				<Logo showSubheading={true} className="justify-center h-20 m-auto  pb-0" />
 			</a>
 			<p class="text-sm text-center pt-2 uppercase">
 				Lietuviškas nuo plytelės iki pupelės šokoladas

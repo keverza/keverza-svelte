@@ -6,7 +6,7 @@
 	import { page } from '$app/stores';
 
 	import ChartRadar from '../../../components/ChartRadar.svelte';
-	import ChartLabels from '../../../components/ChartLabels.svelte';
+	import ChartOptions from '../../../components/ChartLabels.svelte';
 
 	let curProduct = $productStore.filter((product) => product.href === $page.params.product);
 
@@ -22,8 +22,8 @@
 	<h2>Apklausa</h2>
 	<p>Įvertinkite <span class="font-semibold"> {curProduct[0].name}</span> šokolado skonį</p>
 </div>
-<ChartLabels />
-<ChartRadar {data} />
+<ChartOptions />
+<!-- <ChartRadar {data} /> -->
 
 <!-- <form on:submit|preventDefault={handleSubmit} class="flex flex-col justify-between items-center">
 	<label for="a">a:</label>
