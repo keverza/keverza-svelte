@@ -25,7 +25,4 @@
 	>
 		Prideti i krepseli <p>(jau yra: {inCart[0] ? inCart[0].quantity : 0})</p>
 	</button>
-	{#each $cartData as item}
-		<p>{item.name}: {item.quantity}</p>
-	{/each}
 </div>

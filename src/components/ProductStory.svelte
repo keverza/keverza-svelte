@@ -96,15 +96,21 @@
 		</div>
 	</div>
 </div>
-
-<a
-	href="/products/{product.href}/poll"
-	class="text-center min-w-full border p-4 bg-yellow-300 font-semibold">Poll</a
+<div
+	class="px-8 grid grid-cols-2 grid-rows-1 lg:grid-cols-2 lg:grid-rows-1 gap-4 sm:gap-6 lg:gap-8 relative mb-5   "
 >
-<a
-	href="/products/{product.href}/alt"
-	class="text-center min-w-full border p-4 bg-yellow-300 font-semibold">kitas dizainas</a
->
+	<a
+		href="/products/{product.href}/poll"
+		class="text-center min-w-full border p-4 rounded hover:bg-slate-800 bg-gray-600 font-semibold text-white"
+		>TEST Poll</a
+	>
+	<a
+		href="/products/{product.href}/alt"
+		class="text-center min-w-full border  rounded p-4 hover:bg-slate-800 bg-gray-600 font-semibold text-white"
+	>
+		TEST Kitas dizainas</a
+	>
+</div>
 
 <style>
 </style>

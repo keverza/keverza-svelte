@@ -46,16 +46,3 @@
 		bind:value={data[6]}
 	/>
 </form> -->
-
-<form on:submit|preventDefault={handleSubmit} class="flex flex-col justify-between items-center">
-	<label for="text">Jūsų nuomonė:</label>
-	<input type="text" id="text" class="border border-gray-600 rounded-lg mx-2 mb-4" />
-
-	<label for="token">Kodas:</label>
-	<input type="text" id="token" class="border border-gray-600 rounded-lg mx-2 mb-4" />
-
-	<button
-		class="border border-gray-800 bg-white font-semibold hover:bg-amber-500 hover:text-white rounded-lg py-1 px-3"
-		>Pateikti</button
-	>
-</form>

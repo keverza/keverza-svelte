@@ -7,8 +7,7 @@ export const filteredProduct = writable([])
 export const props = writable([])
 
 // Poll stores
-
-
+export const currentQuestion = writable(0)
 export const questionOptions =  writable({
     tastes :[    
         { id: 1, selected: false, text: 'Karamelė' },

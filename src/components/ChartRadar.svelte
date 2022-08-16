@@ -125,11 +125,11 @@
 		});
 	}
 
-	function updateChart(name, value) {
-		myChart.config.data.labels.push(name);
-		myChart.config.data.datasets[0].data.push(value);
-		myChart.update();
-	}
+	// function updateChart(name, value) {
+	// 	myChart.config.data.labels.push(name);
+	// 	myChart.config.data.datasets[0].data.push(value);
+	// 	myChart.update();
+	// }
 
 	afterUpdate(createChart);
 </script>
@@ -138,6 +138,6 @@
 	<canvas bind:this={myChartCanvas} id="myChart" width="400" height="400" />
 </div>
 
-<div class="flex fles-row justify-center items-center">
+<!-- <div class="flex fles-row justify-center items-center">
 	<button class="border-2 px-2" on:click={() => updateChart('skonis', 80)}>Add radii</button>
-</div>
+</div> -->
