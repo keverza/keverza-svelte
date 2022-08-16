@@ -1,8 +1,6 @@
 <svelte:options immutable={true} />
 
 <script>
-	import { afterUpdate } from 'svelte';
-
 	export let label;
 	let style = ' px-4 py-2 rounded-lg uppercase ';
 </script>
